@@ -6,8 +6,8 @@ public class CatControls : MonoBehaviour
     //Speed of the cat moving left or right
     public float cat_speed = 6;
 
-    //The speed of the cat jumping
-    public float jump_speed = 10;
+    //How far up the cat jumps
+    public float jump_height = 7;
 
     //Check if the cat is on the ground
     bool touching_ground = true;
@@ -16,8 +16,8 @@ public class CatControls : MonoBehaviour
     Rigidbody2D cat_rb;
 
     //Boundaries
-    public float right = 8.2f;
-    public float left = -8.2f;
+    public float right = 8.5f;
+    public float left = -8.5f;
 
     void Start()
     {
@@ -63,7 +63,7 @@ public class CatControls : MonoBehaviour
         //Jumps directly up when the space button is pressed
         if((Keyboard.current.spaceKey.wasPressedThisFrame) && (touching_ground == true))
         {
-            cat_rb.linearVelocity = new Vector2(cat_rb.linearVelocity.x, jump_speed);
+            cat_rb.linearVelocity = new Vector2(cat_rb.linearVelocity.x, jump_height);
             
             //Changes touching_ground to false because it is off the ground
             touching_ground = false;
@@ -73,10 +73,12 @@ public class CatControls : MonoBehaviour
         //Boundaries for left and right
         if(transform.position.x < left)
         {
+            //Ensures that the cat does not move past the left boundary
             transform.position = new Vector2(left, transform.position.y);
         }
         else if(transform.position.x > right)
         {
+            //Ensures that the cat does not move past the right boundary
             transform.position = new Vector2(right, transform.position.y);
         }
     }
