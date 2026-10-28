@@ -9,12 +9,6 @@ public class BirdCreation : MonoBehaviour
     //Timer for the birds
     float timer = 0;
 
-    void Start()
-    {
-        
-    }
-
-   
     void BirdSpawn()
     {
         //Creates a new bird object at height between 2 and 3

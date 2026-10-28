@@ -8,11 +8,6 @@ public class BirdMovements : MonoBehaviour
     //Boundary for the bird
     public float right_boundary = 10;
 
-    void Start()
-    {
-       
-    }
-
     void Update()
     {
         //Make the bird move from left to right
@@ -25,12 +20,16 @@ public class BirdMovements : MonoBehaviour
         }
     }
 
+    //Helper method for what happens when the cat touches the bird
     void CatTouchesBird(Collider2D cat)
     {
+        //Destroy the bird object and add the points
         if(cat.gameObject.name == "Cat")
         {
+            Scoreboard.IncreaseScore(7);
             Destroy(gameObject);
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D decimate)
