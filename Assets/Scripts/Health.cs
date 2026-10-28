@@ -29,6 +29,15 @@ public class Health : MonoBehaviour
         hearts = hearts - 1;
     }
 
+    public static void IncreaseHealth()
+    {
+        //Adds an heart if there are less than 3 hearts
+        if(hearts < 3)
+        {
+            hearts = hearts + 1;
+        }
+    }
+
     void RestartGame()
     {
         //If the player loses, allow the player to restart the game
