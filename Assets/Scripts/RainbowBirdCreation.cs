@@ -16,13 +16,12 @@ public class RainbowBirdCreation : MonoBehaviour
         Instantiate(rainbow_bird, new Vector2(-10, height), Quaternion.identity);
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Increase the time
         timer = timer + Time.deltaTime;
 
-        //Create the rainbow bird when the timer hits 16
+        //Create the rainbow bird when the timer hits 25
         if(timer >= spawn_rate)
         {
             RainbowBirdSpawn();

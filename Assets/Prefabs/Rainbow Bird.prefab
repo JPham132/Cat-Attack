@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2897231242125853769}
   - component: {fileID: 7185145173595997354}
   - component: {fileID: 268978056179988271}
+  - component: {fileID: 7407017044713427124}
   m_Layer: 0
   m_Name: Rainbow Bird
   m_TagString: Untagged
@@ -81,11 +82,11 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.45171314, g: 0.23820755, b: 0.5, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 1183187509, guid: 0bfa936cd3f12b44a858d1b1d33e77a2, type: 3}
+  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -142,5 +143,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b960439e9eacab9449197a534401426d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RainbowBirdMovements
-  rainbow_speed: 6
+  rainbow_speed: 7
   right_boundary: 10
+--- !u!95 &7407017044713427124
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866672535123858437}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24f57035904147c468a55e462e6e57d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

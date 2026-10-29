@@ -14,6 +14,7 @@ public class Scoreboard : MonoBehaviour
     //Double point activation and timer for double points
     public static bool double_p = false;
     public static float double_p_timer = 0;
+    public TMP_Text double_p_text;
 
     //Increase the score when the cat catches something
     public static void IncreaseScore(int points)
@@ -37,6 +38,7 @@ public class Scoreboard : MonoBehaviour
         }
     }
 
+    //Activate double points for 10 seconds
     public static void DoublePoints()
     {
         double_p = true;
@@ -51,30 +53,37 @@ public class Scoreboard : MonoBehaviour
         //Gets the high score
         high_score = PlayerPrefs.GetInt("HighScore", 0);
 
-        //Reset the double points
+        //Reset the double points and hide the text
         double_p = false;
         double_p_timer = 0;
+        double_p_text.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        //Update the current score and highh score
+        //Update the current score and high score
         current_score.text = "Score: " + score;
         high_score_text.text = "High Score: " + high_score;
 
         //Check for if double points is on
         if(double_p == true)
         {
+            //Show the double points text
+            double_p_text.gameObject.SetActive(true);
+            double_p_text.text = "2X Points: " + Mathf.CeilToInt(double_p_timer);
+
             //Decrease the time
             double_p_timer = double_p_timer - Time.deltaTime;
 
             //If it reaches 0, turn off double points
-            if(double_p_timer < 1)
+            if(double_p_timer <= 0)
             {
                 double_p = false;
                 double_p_timer = 0;
+
+                //Hide the double points text
+                double_p_text.gameObject.SetActive(false);
             }
         }
     }
-
 }

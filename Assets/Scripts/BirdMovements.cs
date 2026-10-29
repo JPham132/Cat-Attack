@@ -23,9 +23,13 @@ public class BirdMovements : MonoBehaviour
     //Helper method for what happens when the cat touches the bird
     void CatTouchesBird(Collider2D cat)
     {
-        //Destroy the bird object and add the points
         if(cat.gameObject.name == "Cat")
         {
+            //Gets the cat controls and play the noise
+            CatControls cat_con = cat.GetComponent<CatControls>();
+            cat_con.CatchSound();
+            
+            //Destroy the bird object and add the points
             Scoreboard.IncreaseScore(7);
             Destroy(gameObject);
         }

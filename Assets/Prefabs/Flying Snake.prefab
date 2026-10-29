@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6974984190073804464}
   - component: {fileID: 7106672719142082631}
   - component: {fileID: 3643757344417093990}
+  - component: {fileID: 7898816614465049243}
   m_Layer: 0
   m_Name: Flying Snake
   m_TagString: Untagged
@@ -81,10 +82,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.36010915, g: 0.8584906, b: 0.14173192, a: 1}
+  m_Sprite: {fileID: 1529739881, guid: 29f65b7a2c1d0dd488aa66edcf92d559, type: 3}
+  m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,3 +145,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SnakeMovements
   snake_speed: 4
   right_boundary: 10
+--- !u!95 &7898816614465049243
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344583140576023065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec173e23e23cde24da2c00365a890925, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

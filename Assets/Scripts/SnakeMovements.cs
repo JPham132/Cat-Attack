@@ -13,6 +13,10 @@ public class SnakeMovements : MonoBehaviour
     {
         if(cat.gameObject.name == "Cat")
         {
+            //Get the cat controls and play the snake collision noise
+            CatControls cat_con = cat.GetComponent<CatControls>();
+            cat_con.SnakeSound();
+
             //Decreases the health and destroys the snake
             Health.decreaseHealth();
             Destroy(gameObject);
@@ -34,6 +38,4 @@ public class SnakeMovements : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }

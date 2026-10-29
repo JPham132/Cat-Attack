@@ -3,7 +3,7 @@ using UnityEngine;
 public class RainbowBirdMovements : MonoBehaviour
 {
     //Speed and boundary for the rainbow bird
-    public float rainbow_speed = 6;
+    public float rainbow_speed = 7;
     public float right_boundary = 10;
   
     //Helper method for when the cat touches the rainbow bird
@@ -11,6 +11,10 @@ public class RainbowBirdMovements : MonoBehaviour
     {
         if(cat.gameObject.name == "Cat")
         {
+            //Gets the cat controls and play the noise
+            CatControls cat_con = cat.GetComponent<CatControls>();
+            cat_con.CatchSound();
+            
             //Activate double points for 10 seconds
             Scoreboard.DoublePoints();
             Destroy(gameObject);

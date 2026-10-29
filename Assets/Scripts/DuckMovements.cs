@@ -11,6 +11,10 @@ public class DuckMovements : MonoBehaviour
     {
         if(cat.gameObject.name == "Cat")
         {
+            //Gets the cat controls and play the noise
+            CatControls cat_con = cat.GetComponent<CatControls>();
+            cat_con.CatchSound();
+            
             Health.IncreaseHealth();
             Destroy(gameObject);
         }

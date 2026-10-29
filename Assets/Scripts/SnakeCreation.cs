@@ -10,7 +10,7 @@ public class SnakeCreation : MonoBehaviour
     float timer = 0;
     float faster_timer = 0;
 
-    //The fastests that snakes are allowed to spawn in
+    //The fastest that snakes are allowed to spawn
     public float maximum_rate = 3.5f;
 
     void SnakeSpawn()
